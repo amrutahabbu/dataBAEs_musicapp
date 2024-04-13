@@ -7,14 +7,16 @@ import gradio as gr
 from gradio import themes
 from feature3 import get_fun_fact, get_mood_fact
 from feature2 import characteristic_predict
-import tensorflow as tf
-
-
-model_path = '/Users/bach/Documents/MP3-Project/MP3_Project_Git/dataBAEs_musicapp/my_model_weighted.h5'
-
 
 import gradio as gr
 import json  # Import the json module
+
+
+
+#Change the model path to application path
+#model_path="/data/my_model_weighted.h5"
+model_path = '/Users/bach/Documents/MP3-Project/MP3_Project_Git/dataBAEs_musicapp/my_model_weighted.h5'
+
 
 js_func = """
 function refresh() {
@@ -26,6 +28,13 @@ function refresh() {
     }
 }
 """
+
+
+
+'''
+Input : mp3 song
+output son : embed_song function returns vector
+'''
 
 def process_song(uploaded_file_path):
     mp3 = embed_song(uploaded_file_path)

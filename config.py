@@ -4,22 +4,6 @@ import os
 from sqlalchemy import *
 from astrapy.db import AstraDB
 
-
-#parameters for local database BOOK
-db_username = 'root'
-db_password = 'Admin123'
-#db_host = 'recommendation-3.c8scn1wkslmg.us-east-2.rds.amazonaws.com'
-db_host = 'localhost'
-#db_host = 'arcresdb.rs.gsu.edu'
-db_port = '3306'
-#db_name = 'rspm'
-#db_name = 'rspmdev'
-db_name = 'rspm_book_prod_new'
-
-
-# Create the database URL in the format required by SQLAlchemy
-DB_URI = f"mysql+pymysql://{db_username}:{db_password}@{db_host}:{db_port}/{db_name}"
-
 def connect_AstraDB():
     # Initialize the client
     db = AstraDB(
