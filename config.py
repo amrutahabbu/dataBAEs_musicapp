@@ -1,7 +1,6 @@
 ## ALL THE CONFIGURATIONS GO HERE
 
 import os
-from sqlalchemy import *
 from astrapy.db import AstraDB
 
 def connect_AstraDB():
